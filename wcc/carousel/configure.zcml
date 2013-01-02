@@ -17,6 +17,14 @@
     <include package=".portlet"/>
     <include package=".cmv"/>
 
+    <class class="Products.ATContentTypes.content.document.ATDocument">
+       <implements interface="wcc.carousel.interfaces.ICarouselImageEnabled"/>
+   </class>
+
+    <class class="Products.ATContentTypes.content.newsitem.ATNewsItem">
+       <implements interface="wcc.carousel.interfaces.ICarouselImageEnabled"/>
+    </class>
+
     <!-- -*- extra stuff goes here -*- -->
 
 </configure>

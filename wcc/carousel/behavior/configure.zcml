@@ -6,4 +6,13 @@
 
     <!-- -*- extra stuff goes here -*- -->
 
+    <plone:behavior
+        title="Carousel Image"
+        description="Add carousel image field"
+        provides=".carouselimage.ICarouselImage"
+        factory=".carouselimage.CarouselImage"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+
 </configure>
