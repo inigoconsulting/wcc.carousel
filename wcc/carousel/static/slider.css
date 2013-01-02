@@ -1,0 +1,38 @@
+.wcc-slider {
+    min-height:200px;
+    -moz-box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 4px 8px rgba(0,0,0,0.5);
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+    margin-bottom:15px;
+    background:#fff;
+    width:850px;
+}
+
+.wcc-slider div.pane {
+    float:left;
+    display:none;
+    width:550px;
+    height:290px;
+    background:#fff;
+}
+
+.wcc-slider ul {
+    float:right;
+    background:#FBF8F1;
+}
+
+.wcc-slider li {
+    display:block;
+    width:280px;
+    height:50px;
+    border-bottom:1px solid #fff;
+    border-top:1px solid #ddd;
+    padding:10px;
+    color:#555;
+}
+
+.wcc-slider li.active {
+    background: #ccc;
+    color:#000;
+
+}

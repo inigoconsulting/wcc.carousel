@@ -3,5 +3,7 @@
     <version>1</version>
     <dependencies>
         <dependency>profile-plone.app.dexterity:default</dependency>
+        <dependency>profile-collective.js.jqueryui:default</dependency>
+        <dependency>profile-collective.portlet.collectionmultiview:default</dependency>
     </dependencies>
 </metadata>

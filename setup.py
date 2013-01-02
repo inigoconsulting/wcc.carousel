@@ -29,6 +29,8 @@ setup(name='wcc.carousel',
           'plone.app.dexterity',
           'plone.namedfile [blobs]',
           'collective.grok',
+          'collective.portlet.collectionmultiview',
+          'collective.js.jqueryui',
           # -*- Extra requirements: -*-
       ],
       extras_require={
