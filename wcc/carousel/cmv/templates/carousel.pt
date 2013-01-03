@@ -3,8 +3,12 @@
     class="portlet-wcc-featured wcc-slider">
     <ul>
         <li tal:repeat="item results">
-            <h3 tal:content="item/Title"></h3>
-            <p tal:content="item/Description"></p>
+            <tal:block define="obj item/getObject">
+            <a tal:attributes="href obj/absolute_url">
+                <h3 tal:content="item/Title"></h3>
+                <p tal:content="item/Description"></p>
+            </a>
+            </tal:block>
         </li>
     </ul>
     <div tal:repeat="item results" class="pane">

@@ -1,5 +1,5 @@
 <a tal:attributes="href context/absolute_url"
     tal:define="scales context/@@images;"
     style="height:550px;width:290px">
-    <img tal:replace="structure python:scales.scale('carousel_image' , width=550, height=290)"/>
+    <img tal:replace="structure python:scales.scale('carousel_image' , width=550, height=290).tag()"/>
 </a>
