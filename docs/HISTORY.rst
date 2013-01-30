@@ -4,7 +4,7 @@ Changelog
 1.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Added new implementation of frontpage slider [izhar]
 
 
 1.0 (2013-01-29)
