@@ -1,0 +1,17 @@
+<div
+    tal:define="results view/items"
+    class="portlet-wcc-featured wcc-slider portletWCCSliderPortlet">
+    <ul>
+        <li tal:repeat="obj results">
+            <a tal:attributes="href obj/absolute_url">
+                <h3 tal:content="obj/Title"></h3>
+                <p tal:content="obj/Description"></p>
+            </a>
+        </li>
+    </ul>
+    <div tal:repeat="obj results" class="pane">
+        <tal:block define="content python:view.get_tile(obj)"
+                    replace="structure content"/>
+    </div>
+    <div class="visualClear"></div>
+</div>

@@ -5,5 +5,13 @@
 
     <include package="plone.app.portlets" file="permissions.zcml"/>
     <!-- -*- extra stuff goes here -*- -->
+    <plone:portlet
+        name="wcc.carousel.portlet.WCCSliderPortlet"
+        interface=".wccsliderportlet.IWCCSliderPortlet"
+        assignment=".wccsliderportlet.Assignment"
+        renderer=".wccsliderportlet.Renderer"
+        addview=".wccsliderportlet.AddForm"
+        editview=".wccsliderportlet.EditForm"
+        />
 
 </configure>
