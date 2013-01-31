@@ -15,6 +15,10 @@ from wcc.carousel.validators import ArchetypeImageSizeValidator
 class ExtensionImageField(ExtensionField, atapi.ImageField):
     pass
 
+class ExtensionStringField(ExtensionField, atapi.StringField):
+    pass
+
+
 class CarouselImage(grok.Adapter):
 
     # This applies to all AT Content Types, change this to
@@ -37,9 +41,18 @@ class CarouselImage(grok.Adapter):
             storage = atapi.AttributeStorage(),
             schemata='settings',
             widget = atapi.ImageWidget(
-                label = _(u'Carousel image'),
-                description = _(u'Upload carousel image. Required size is'
+                label = _(u'Slider image'),
+                description = _(u'Upload sliderimage. Required size is'
                                 ' 550x290')
+            )
+        ),
+        ExtensionStringField('carousel_description',
+            required=0,
+            storage = atapi.AttributeStorage(),
+            schemata='settings',
+            widget = atapi.StringField._properties['widget'](
+                label=_(u'Slider description'),
+                description=_(u'Text to display below title on slider'),
             )
         )
     ]

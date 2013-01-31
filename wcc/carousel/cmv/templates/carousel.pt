@@ -6,7 +6,7 @@
             <tal:block define="obj item/getObject">
             <a tal:attributes="href obj/absolute_url">
                 <h3 tal:content="item/Title"></h3>
-                <p tal:content="item/Description"></p>
+                <p tal:content="item/carousel_description|nothing"></p>
             </a>
             </tal:block>
         </li>

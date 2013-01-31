@@ -5,7 +5,7 @@
         <li tal:repeat="obj results">
             <a tal:attributes="href obj/absolute_url">
                 <h3 tal:content="obj/Title"></h3>
-                <p tal:content="obj/Description"></p>
+                <p tal:content="obj/carousel_description|nothing"></p>
             </a>
         </li>
     </ul>
