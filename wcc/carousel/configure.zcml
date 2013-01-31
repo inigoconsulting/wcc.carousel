@@ -25,6 +25,11 @@
        <implements interface="wcc.carousel.interfaces.ICarouselImageEnabled"/>
     </class>
 
+    <class class="Products.ATContentTypes.content.event.IATEvent">
+       <implements interface="wcc.carousel.interfaces.ICarouselImageEnabled"/>
+    </class>
+
+
     <!-- -*- extra stuff goes here -*- -->
 
 </configure>
