@@ -3,10 +3,14 @@
     class="portlet-wcc-featured wcc-slider portletWCCSliderPortlet">
     <ul>
         <li tal:repeat="obj results">
-            <a tal:attributes="href obj/absolute_url">
-                <h3 tal:content="obj/Title"></h3>
-                <p tal:content="obj/carousel_description|nothing"></p>
-            </a>
+            <tal:block define="title obj/carousel_title|obj/Title;
+                                title_obj obj/Title;
+                                title python:title or title_obj">
+                <a tal:attributes="href obj/absolute_url">
+                    <h3 tal:content="title"></h3>
+                    <p tal:content="obj/carousel_description|nothing"></p>
+                </a>
+            </tal:block>
         </li>
     </ul>
     <div tal:repeat="obj results" class="pane">

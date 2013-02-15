@@ -24,10 +24,24 @@ class ICarouselImage(form.Schema, ICarouselImageEnabled):
 
     # -*- Your Zope schema definitions here ... -*-
     carousel_image = namedfile.NamedBlobImage(
-        title=_(u'Carousel Image'),
+        title=_(u'Slider image'),
         description=_(u'Upload carousel image. Required size is 550x290px'),
         required=False
     )
+
+    carousel_title = schema.TextLine(
+        title=_(u'Slider title'),
+        description=_(u'If set, the slider will use this title instead'
+                    ' of the content title'),
+        required=False
+    )
+
+    carousel_description = schema.TextLine(
+        title=_(u'Slider description'),
+        description=_(u'Text to display below title on slider'),
+        required=False
+    )
+
 
 @form.validator(field=ICarouselImage['carousel_image'])
 def validateCarouselImage(value):

@@ -46,6 +46,18 @@ class CarouselImage(grok.Adapter):
                                 ' 550x290')
             )
         ),
+
+        ExtensionStringField('carousel_title',
+            required=0,
+            storage = atapi.AttributeStorage(),
+            schemata='settings',
+            widget = atapi.StringField._properties['widget'](
+                label=_(u'Slider title'),
+                description=_(u'If set, the slider will use this title instead'
+                                ' of the content title')
+            )
+        ),
+
         ExtensionStringField('carousel_description',
             required=0,
             storage = atapi.AttributeStorage(),
