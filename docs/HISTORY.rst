@@ -4,7 +4,7 @@ Changelog
 1.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- added slider_title field to allow custom slider item title (re #197) [izhar]
 
 
 1.3 (2013-02-06)
