@@ -45,6 +45,8 @@ class ICarouselImage(form.Schema, ICarouselImageEnabled):
 
 @form.validator(field=ICarouselImage['carousel_image'])
 def validateCarouselImage(value):
+    if not value:
+        return True
     validator = DexterityImageSizeValidator()
     validator.validate(value)
     return True

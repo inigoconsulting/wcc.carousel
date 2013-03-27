@@ -12,6 +12,7 @@
         provides=".carouselimage.ICarouselImage"
         factory=".carouselimage.CarouselImage"
         for="plone.dexterity.interfaces.IDexterityContent"
+        marker=".carouselimage.ICarouselImage"
         />
 
 
