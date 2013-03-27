@@ -94,6 +94,6 @@
 })(jQuery);
 
 $(document).ready(function () {
-    $('.wcc-slider').wcc_slider(); 
+//    $('.wcc-slider').wcc_slider(); 
 });
 

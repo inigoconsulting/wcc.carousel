@@ -12,8 +12,8 @@ from wcc.featurable.interfaces import IFeaturableSettings
 from zope.interface import implements, Invalid
 
 def validate_image(image_file):
-    width = 550
-    height = 290
+    width = 510
+    height = 330
     try:
         image_file.seek(0)
         image = Image.open(image_file)
