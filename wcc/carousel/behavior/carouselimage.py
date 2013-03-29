@@ -19,13 +19,13 @@ class ICarouselImage(form.Schema, ICarouselImageEnabled):
 
     form.fieldset('settings',
         label=_(u'Settings'),
-        fields=['carousel_image']
+        fields=['carousel_image', 'carousel_title', 'carousel_description']
     )
 
     # -*- Your Zope schema definitions here ... -*-
     carousel_image = namedfile.NamedBlobImage(
         title=_(u'Slider image'),
-        description=_(u'Upload carousel image. Required size is 550x290px'),
+        description=_(u'Upload carousel image.'),
         required=False
     )
 

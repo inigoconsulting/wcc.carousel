@@ -42,8 +42,7 @@ class CarouselImage(grok.Adapter):
             schemata='settings',
             widget = atapi.ImageWidget(
                 label = _(u'Slider image'),
-                description = _(u'Upload sliderimage. Required size is'
-                                ' 550x290')
+                description = _(u'Upload sliderimage.')
             )
         ),
 
