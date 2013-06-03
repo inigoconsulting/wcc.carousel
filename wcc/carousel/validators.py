@@ -7,8 +7,7 @@ from PIL import Image
 from types import ListType, TupleType
 from five import grok
 from plone.registry.interfaces import IRegistry
-from wcc.featurable import MessageFactory as _
-from wcc.featurable.interfaces import IFeaturableSettings
+from wcc.carousel import MessageFactory as _
 from zope.interface import implements, Invalid
 
 def validate_image(image_file):
