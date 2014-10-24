@@ -13,3 +13,9 @@ class CarouselImageTile(grok.View):
     grok.template('carousel_image_tile')
     grok.name('wcc-featured-view')
     grok.context(ICarouselImageEnabled)
+
+
+class FeaturedCarouselProtlet(grok.View):
+    grok.name('carousel-portlet-view')
+    grok.template('wcc_carousel_image_tile')
+    grok.context(ICarouselImageEnabled)
