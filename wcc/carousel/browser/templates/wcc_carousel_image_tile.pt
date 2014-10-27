@@ -1,12 +1,7 @@
 <tal:block define="scales nocall:context/@@featureimages;
     image python:scales.tag(scale='mini')">
-    <a tal:attributes="href context/absolute_url"
-        tal:condition="image"
-        style="height:550px;width:290px">
-        <img tal:replace="structure python:image"/>
-    </a>
 
-    <span style="display:inline-block; vertical-align:top; margin-left: 20px;">
+    <div class="row">
     <tal:block 
         condition="image"
         define="item_url context/getURL|context/absolute_url;
@@ -15,7 +10,16 @@
         item_description context/Description;
         item_title_or_id context/pretty_title_or_id;
         ">
-        <h2 class="tileHeadline" style="margin-top: 0;">
+    <div class="cell position-0 width-1:4">
+    <a tal:attributes="href context/absolute_url"
+        tal:condition="image"
+        style="height:550px;width:290px">
+        <img tal:replace="structure python:image"/>
+    </a>
+</div>
+
+        <div class="cell position-3 width-3:4">
+        <h2 class="tileHeadline" style="margin-top:0;">
             <a href="#"
                 class="summary url"
                 tal:attributes="href python:(item_type in use_view_action) and item_url+'/view' or item_url;"
@@ -24,14 +28,12 @@
             </a>
         </h2>
 
-        <div class="tileBody">
             <span tal:omit-tag="" tal:condition="not:item_description">
                 &nbsp;
             </span>
             <span class="description" tal:content="item_description">
                 description
             </span>
-        </div>
 
         <p class="tileFooter">
             <a href=""
@@ -40,6 +42,9 @@
                 Read More&hellip;
             </a>
         </p>
+
+        </div>
+
     </tal:block>
-</span>
+</div>
 </tal:block>
