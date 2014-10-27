@@ -1,5 +1,12 @@
 <tal:block define="scales nocall:context/@@featureimages;
-    image python:scales.tag(scale='mini')">
+    image python:scales.tag(scale='mini', css_class='wcc_carousel_image')">
+
+    <style>
+        .wcc_carousel_image {
+            max-width: 70%;
+        }
+
+    </style>
 
     <div class="row">
     <tal:block 
@@ -13,7 +20,7 @@
     <div class="cell position-0 width-1:4">
     <a tal:attributes="href context/absolute_url"
         tal:condition="image"
-        style="height:550px;width:290px">
+        >
         <img tal:replace="structure python:image"/>
     </a>
 </div>
